@@ -420,11 +420,12 @@ img {
 }
 .modal {
   position: absolute;
+  padding: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 528px;
+  width: 528px;
   min-height: 581px;
   border-radius: 4px;
   background-color: var(--dark-bg-text-color);
@@ -731,7 +732,6 @@ img {
   text-align-last: left;
   color: var(--dark-bg-text-color);
   padding-bottom: 20px;
-  transform: translateY(12px);
 }
 .submit-input {
   position: relative;
@@ -765,7 +765,7 @@ img {
   color: var(--dark-bg-text-color);
   border-radius: 4px;
   border-color: var(--accent-color);
-  transform: translateY(30px);
+  transform: translateY(18px);
   cursor: pointer;
 }
 .submit-icon {
@@ -782,10 +782,10 @@ textarea {
   resize: none;
 }
 .form {
-  width: 528px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px;
+  width: 100%px;
+  margin-left: ;
+  margin-right: ;
+  padding: ;
 }
 .form-field {
   position: relative;
@@ -797,9 +797,8 @@ textarea {
   position: absolute;
   width: 18px;
   height: 18px;
-  top: 50%;
+  top: 30px;
   left: 12px;
-  transform: translateY();
   display: inline-block;
 }
 .form-field label {
@@ -828,6 +827,7 @@ textarea {
   line-height: 1.17;
   text-align: center;
   color: var(--tittle-color);
+  margin-top: -10px;
   margin-bottom: 12px;
 }
 .comment {
@@ -846,10 +846,12 @@ textarea {
   transform: translateX(35px);
 }
 .checkbox-input {
-  -webkit-appearance: none;
+  -webkit-appearance: ;
   -moz-appearance: none;
-  appearance: none;
+  appearance: ;
   position: absolute;
+  transform: translateX(-22px);
+  cursor: pointer;
 }
 .checkbox-input:checked + .checkbox-icon {
   border-color: var(--accent-color);
@@ -864,8 +866,10 @@ textarea {
   width: 16px;
   height: 15px;
   border: 2px solid #000;
+  background-color: var(--dark-bg-text-color);
   border-radius: 4px;
   transform: translateX(-23px);
+  pointer-events: none;
 }
 .checkbox-a {
   color: var(--accent-color);
@@ -885,6 +889,7 @@ textarea {
   line-height: 1.87;
   letter-spacing: 0.06em;
   text-align: center;
+  cursor: pointer;
 }
 .form-input:focus {
   outline-color: var(--accent-color);
