@@ -448,6 +448,7 @@ img {
   justify-content: center;
   align-items: center;
   display: inline-block;
+  cursor: pointer;
 }
 .btn-close .icon {
   fill: #000;
@@ -782,10 +783,7 @@ textarea {
   resize: none;
 }
 .form {
-  width: 100%px;
-  margin-left: ;
-  margin-right: ;
-  padding: ;
+  width: 100%;
 }
 .form-field {
   position: relative;
@@ -827,7 +825,6 @@ textarea {
   line-height: 1.17;
   text-align: center;
   color: var(--tittle-color);
-  margin-top: -10px;
   margin-bottom: 12px;
 }
 .comment {
@@ -846,20 +843,22 @@ textarea {
   transform: translateX(35px);
 }
 .checkbox-input {
-  -webkit-appearance: ;
-  -moz-appearance: none;
-  appearance: ;
   position: absolute;
-  transform: translateX(-22px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   cursor: pointer;
 }
 .checkbox-input:checked + .checkbox-icon {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
-  background-image: url("../img/icons/check.svg");
-  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='16' height='15' rx='2' fill='%232196F3'/%3E%3Cpath d='M3.95703 7.75166L3.88825 7.68604L3.81923 7.75141L2.93123 8.59258L2.85486 8.66492L2.93097 8.73753L6.42671 12.0724L6.49574 12.1382L6.56476 12.0724L14.069 4.91352L14.1449 4.84116L14.069 4.76881L13.1873 3.92764L13.1183 3.86183L13.0493 3.92761L6.49577 10.1735L3.95703 7.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
   background-origin: border-box;
   transition: border-color background-color var(--animation);
+}
+.checkbox-input:focus + .checkbox-icon {
+  border-color: var(--accent-color);
 }
 .checkbox-icon {
   position: absolute;
@@ -869,7 +868,7 @@ textarea {
   background-color: var(--dark-bg-text-color);
   border-radius: 4px;
   transform: translateX(-23px);
-  pointer-events: none;
+  cursor: pointer;
 }
 .checkbox-a {
   color: var(--accent-color);
@@ -880,7 +879,9 @@ textarea {
   height: 50px;
   border: none;
   border-radius: 4px;
-  margin-left: 124px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 30px;
   background-color: var(--accent-color);
   color: var(--dark-bg-text-color);
